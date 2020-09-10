@@ -1,0 +1,44 @@
+
+<%= form_with(model: cult, local: true, :html => {class: 'new-form'} ) do |form| %>
+  <% if cult.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cult.errors.count, "error") %> prohibited this cult from being saved:</h2>
+
+      <ul>
+        <% cult.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name,  class: 'name' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :founding_year %>
+    <%= form.number_field :founding_year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :slogan %>
+    <%= form.text_area :slogan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :minimum_age %>
+    <%= form.number_field :minimum_age %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+

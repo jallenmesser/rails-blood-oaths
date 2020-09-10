@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cult.name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @cult.location %>
+</p>
+
+<p>
+  <strong>Founding year:</strong>
+  <%= @cult.founding_year %>
+</p>
+
+<p>
+  <strong>Slogan:</strong>
+  <%= @cult.slogan %>
+</p>
+
+<p>
+  <strong>Minimum age:</strong>
+  <%= @cult.minimum_age %>
+</p>
+
+<%= link_to 'Edit', edit_cult_path(@cult) %> |
+<%= link_to 'Back', cults_path %>

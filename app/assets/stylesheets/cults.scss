@@ -1,0 +1,70 @@
+// Place all the styles related to the cults controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.cult-grid{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cult{
+    display: flex;
+    flex-direction: column;
+    background-color: #a9a9a9;
+    border-radius: 10px;
+    justify-content: space-between;
+    padding: 10px;
+    color: white;
+    margin: 10px;
+    height: 200px;
+    width: 200px;
+    word-wrap: break-word;
+}
+
+h3{
+    color:#8a0303;
+    text-align:center;
+}
+
+.cult a{
+    color:#8a0303;
+}
+
+.cult-links{
+    display: flex;
+    justify-content: space-around;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+}
+
+.new-cult-button{
+    background-color: red;
+    color: white;
+    height: 10vh;
+    width: 20vw;
+    font-size: 2vw;
+    border-radius: 10px;
+}
+
+.new-cult-button:hover{
+    background-color: black;
+    color: red;
+}
+
+.new-form{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+}
+
+.name{
+    max-width: 30vw;
+}

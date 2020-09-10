@@ -10,6 +10,21 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= image_tag "bloodoath.png", class: "logo-size"%>
+    <div class="content">
+      <div class="side">
+        <% Cult.all.each do |cult| %>
+          <div class="sidbar-cult">
+            
+            <%= link_to cult.name, cult %>
+            <br>
+          </div>
+        <% end %>
+        <%= link_to 'New Cult', new_cult_path %>
+      </div>
+      <div class="main-content">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>

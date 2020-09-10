@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cults</h1>
+
+  <div class="cult-grid">
+    <% @cults.each do |cult| %>
+      <div class="cult">
+        <h3><%= cult.name %></h3>
+        <p><%= cult.location %></p>
+        <p><%= cult.founding_year %></p>
+        <p><%= cult.slogan %></p>
+        <p><%= cult.minimum_age %></p>
+        <div class="cult-links">
+          <%= link_to 'Show', cult %>
+          <%= link_to 'Edit', edit_cult_path(cult) %>
+          <%= link_to 'Destroy', cult, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+<br>
+<div class="button-container">
+<%= button_to "New Cult", new_cult_path, :method => :get, :class => "new-cult-button" %>
+</div>
